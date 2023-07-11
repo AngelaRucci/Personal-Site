@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 calc(8px + 1.5625vw);
+
+    // remove when we add image
+    h2 {
+        margin: 0;
+    }
+
+    nav {
+        margin-left: auto;
+
+        ul {
+            display: flex;
+        
+            li {
+                list-style-type: none;
+                margin: 0 10px;
+            }
+        }
+    }
+}

@@ -1,8 +1,8 @@
 // Variables for colors
-$red: #D95543;
-$blue: #43D9BE;
+$red: #D94343;
+$blue: #43BED9;
 $yellow: #D9CA43;
-$orange: #D99443;
+$orange: #D98A2E;
 $black: #2E2E2E;
 $white: #F3F3F3;
 
@@ -67,5 +67,15 @@ html {
    &:hover{
       color: $blue;
    }
+ }
+
+
+ // remove before pushing 
+
+ .test{
+  width: 100vw;
+  overflow: hidden;
+  height: 600px;
+  // background-color: $orange;
  }
  

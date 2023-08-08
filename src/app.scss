@@ -1,0 +1,15 @@
+.app {
+    display: grid;
+}
+
+header {
+    grid-row-start: 1;
+    z-index: 10;
+    height: fit-content;
+    grid-column: 1/2;
+}
+
+main {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}

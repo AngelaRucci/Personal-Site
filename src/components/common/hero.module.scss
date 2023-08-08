@@ -1,0 +1,33 @@
+.hero {
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 200px 400px 100px;
+    grid-template-columns: none;
+
+    .background {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+
+    section {
+        margin: 0;
+        z-index: 100;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+
+        h1, p {
+            margin: 2px 0;
+            padding: 0;
+
+        }
+
+        button {
+            margin: 10px 0;
+        }
+    }
+
+    
+}

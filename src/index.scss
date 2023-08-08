@@ -1,21 +1,55 @@
-// Variables for colors
-$red: #D95543;
-$blue: #43D9BE;
-$yellow: #D9CA43;
-$orange: #D99443;
-$black: #2E2E2E;
-$white: #F3F3F3;
-
+@use "src/styles/colors";
+@use "src/styles/padding";
 
 // FONTS
 
+/* roboto-100 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fonts/roboto-v30-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/roboto-v30-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 /* roboto-regular - latin */
 @font-face {
-   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-   font-family: 'Roboto';
-   font-style: normal;
-   font-weight: 400;
-   src: url('./fonts/roboto-v30-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/roboto-v30-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/roboto-v30-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/roboto-v30-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./fonts/roboto-v30-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* montserrat-700 - latin */
@@ -47,25 +81,54 @@ html {
    min-height: 100%;
    width: 100%;
    font-family: 'Catamaran', sans-serif;
-   color: $white;
-   background-color: $black;
+   color: colors.$white;
+   background-color: colors.$black;
  }
+
+ // fonts
 
  h1 {
    font-family: 'Montserrat', sans-serif;
+   font-size: 2.8rem;
  }
 
  h2, h3, h4, h5, h6 {
    font-family: 'Roboto', sans-serif;
  }
 
+[role="doc-subtitle"] {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
  // styling for links
  a {
-   color: $white;
+   color: colors.$white;
    text-decoration: none;
 
    &:hover{
-      color: $blue;
+      color: colors.$blue;
    }
  }
- 
+
+ button {
+  color: colors.$white;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid colors.$white;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 1.2rem;
+  padding: 5px 25px;
+  height: fit-content;
+  width: fit-content;
+ }
+
+ //pading for document
+ section {
+  padding: 0 padding.$content-padding;
+ }
+
+ header {
+  padding: padding.$content-padding;
+ }

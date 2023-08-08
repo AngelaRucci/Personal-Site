@@ -1,10 +1,15 @@
+import React  from 'react';
+import Hero from './components/common/Hero';
 import Navigation from './components/common/Navigation';
+import './app.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Navigation />
-      <h1>Hi mom!</h1>
+      <main>
+        <Hero />
+      </main>
     </div>
   );
 }

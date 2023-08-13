@@ -8,14 +8,14 @@ import styles from './index.module.scss';
 import { useState } from 'react';
 
 export default function Navigation(){
-    const [menuHidden, setMenuHidden] = useState(false);
+    const [menuHidden, setMenuHidden] = useState(true);
 
     function handleMenuClick(){
         setMenuHidden((menu)=>!menu);
     }
     
     return (
-        <header role='banner' className={menuHidden ? styles.header : styles.mobileMenuHeader}>
+        <header role='banner' className={menuHidden ? styles.header : `${styles.mobileMenuHeader} fade-in`}>
             <Logo className={styles.logo}/>
 
             <button className={styles.mobileMenu} onClick={handleMenuClick}>{menuHidden ? <Menu/> : <Close/>}</button>

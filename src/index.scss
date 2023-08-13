@@ -1,6 +1,27 @@
 @use "src/styles/colors";
 @use "src/styles/padding";
 
+
+// animations 
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+.fade-out {
+  animation: fadeOut 1s;
+}
+
 // FONTS
 
 /* roboto-100 - latin */
@@ -61,14 +82,78 @@
    src: url('./fonts/montserrat-v25-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
  }
 
- /* catamaran-300 - latin */
+/* catamaran-100 - latin */
 @font-face {
-   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-   font-family: 'Catamaran';
-   font-style: normal;
-   font-weight: 300;
-   src: url('./fonts/catamaran-v18-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
- }
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fonts/catamaran-v18-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* catamaran-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./fonts/catamaran-v18-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* catamaran-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/catamaran-v18-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* catamaran-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/catamaran-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* catamaran-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/catamaran-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* catamaran-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/catamaran-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* catamaran-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/catamaran-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* catamaran-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./fonts/catamaran-v18-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* catamaran-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./fonts/catamaran-v18-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 html {
    margin: 0px;
@@ -87,13 +172,25 @@ html {
 
  // fonts
 
- h1 {
+ h1, h2 {
    font-family: 'Montserrat', sans-serif;
-   font-size: 2.8rem;
  }
 
- h2, h3, h4, h5, h6 {
+ h3, h4, h5, h6 {
    font-family: 'Roboto', sans-serif;
+ }
+
+ h1 {
+  font-size: 2.8rem;
+ }
+
+ h2 {
+  font-size: 2rem;
+ }
+
+ h6 {
+  font-weight: 300;
+  font-size: 0.8rem;
  }
 
 [role="doc-subtitle"] {
@@ -131,4 +228,8 @@ html {
 
  header {
   padding: padding.$content-padding;
+ }
+
+ .new-section {
+  margin-top: 3rem;
  }
